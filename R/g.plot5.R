@@ -1,6 +1,7 @@
 g.plot5 = function(metadatadir=c(),dofirstpage=FALSE, viewingwindow = 1,f0=c(),f1=c(),overwrite=FALSE,
-                   desiredtz = "Europe/London",threshold.lig=30,threshold.mod=100,threshold.vig=400) {
-  metric="ENMO" 
+                   metric="ENMO", desiredtz = "Europe/London",threshold.lig=30,threshold.mod=100,
+                   threshold.vig=400) {
+  
   if (file.exists(paste(metadatadir,"/results/file summary reports",sep=""))) {
     fnames.fsr = sort(dir(paste(metadatadir,"/results/file summary reports",sep="")))
     ffdone = fnames.fsr #ffdone is now a list of files that have already been processed by g.part5
@@ -190,7 +191,7 @@ g.plot5 = function(metadatadir=c(),dofirstpage=FALSE, viewingwindow = 1,f0=c(),f
           text(y= as.matrix(round(f06))+topp, x= B5, labels=as.character(as.matrix(round(f06))), xpd=TRUE,cex=1)
           text(x=1,y=(max(YXLIM)-10),labels=vars[4],pos=4,font=2,cex=1.2)
           #-----------------------------------------------------------------------------------
-          mtext(paste("Activity and sleep report 2: ",fnamesmeta[i],sep=""), side = 3, line = 0, outer = TRUE,font=2,cex=0.7)
+          mtext(paste("Activity and sleep report: ",fnamesmeta[i],sep=""), side = 3, line = 0, outer = TRUE,font=2,cex=0.7)
         }
         LWDX = 2.5 #linewidth for coloured lines
         LWDA = 0.2

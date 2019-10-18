@@ -17,7 +17,8 @@
 }
 \usage{
   g.plot5(metadatadir=c(),dofirstpage=FALSE, viewingwindow = 1,
-  f0=c(),f1=c(),overwrite=FALSE,metric="ENMO",desiredtz = "Europe/London")
+  f0=c(),f1=c(),overwrite=FALSE,metric="ENMO",desiredtz = "Europe/London",
+  threshold.lig=30, threshold.mod=100, threshold.vig=400)
 }
 \arguments{
   \item{metadatadir}{
@@ -44,6 +45,15 @@
   }
   \item{desiredtz}{
     See \link{g.getmeta}
+  }
+  \item{threshold.lig}{
+    See \link{g.part5}
+  }
+  \item{threshold.mod}{
+    See \link{g.part5}
+  }
+  \item{threshold.vig}{
+    See \link{g.part5}
   }
 }
 \value{
